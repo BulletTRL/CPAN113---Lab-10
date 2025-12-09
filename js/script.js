@@ -72,6 +72,21 @@ function checkExpiration(product) {
     });
 }
 
+async function simulateExpirationScan(products) {
+    log("<strong>Running Expiration Scan...</strong>");
+
+    for (const p of products) {
+        try {
+            const result = await checkExpiration(p);
+            log(result);
+        } catch (error) {
+            log(error);
+        }
+    }
+
+    log("<strong>Scan Finished</strong>");
+}
+
 const perishable1 = new PerishableProductProperties(
     "Milk",
     3.50,
