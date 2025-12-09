@@ -55,6 +55,23 @@ class PerishableProductProperties extends ProductProperties {
     }
 }
 
+//Expiration Checker
+
+function checkExpiration(product) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const today = new Date();
+            const expiry = new Date(product.expirationDate);
+
+            if (expiry < today) {
+                reject(`❌ EXPIRED: ${product.name} expired on ${product.expirationDate}`);
+            } else {
+                resolve(`✅ OK: ${product.name} is still valid until ${product.expirationDate}`);
+            }
+        }, 1000); // 1-second delay to simulate async scan
+    });
+}
+
 const perishable1 = new PerishableProductProperties(
     "Milk",
     3.50,
