@@ -135,3 +135,5 @@ try {
 } catch (err) {
     log(`⚠️ ERROR TEST 3: ${err.message}`);
 }
+
+log ("Error Handling Tests Completed.");
