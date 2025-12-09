@@ -153,6 +153,17 @@ store.addProduct(cereal);
 
 log("<strong>Store setup completed with 5 products (2 perishable).</strong>");
 
+// Inventory value before discount displayed
+const initialInventoryValue = store.getInventoryValue();
+log(`<strong>Inventory value before discount:</strong> $${initialInventoryValue.toFixed(2)}`);
+
+// Apply discount to all products in the store
+ProductProperties.applyDiscount(store.inventory, 0.15);
+
+// Inventory value after discount
+const discountedInventoryValue = store.getInventoryValue();
+log(`<strong>Inventory value after 15% discount:</strong> $${discountedInventoryValue.toFixed(2)}`);
+
 console.log("Perishable Products");
 console.log(perishable1.toString());
 console.log(perishable2.toString());
