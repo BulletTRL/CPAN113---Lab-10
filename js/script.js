@@ -34,6 +34,13 @@ class ProductProperties {
     toString() {
         return `Name: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}`;
     }
+
+    // static method to apply discount to products
+    static applyDiscount(products, discount) {
+        products.forEach(product => {
+            product.price = Number((product.price * (1 - discount)).toFixed(2));
+        });
+    }
 }
 
 // Subclass Inharitance
