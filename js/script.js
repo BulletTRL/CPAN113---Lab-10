@@ -108,3 +108,6 @@ console.log(perishable2.toString());
 log("<strong>Phase 2 Completed: Perishable Products</strong>");
 log(perishable1.toString());
 log(perishable2.toString());
+
+//Expiration Scan
+simulateExpirationScan([perishable1, perishable2]);
