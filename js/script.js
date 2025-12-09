@@ -115,25 +115,26 @@ simulateExpirationScan([perishable1, perishable2]);
 //Error testing below
 log ("<strong>Beginning Error Tests...</strong>");
 
+    //Testing neg value
 try {
     const badProduct1 = new PerishableProductProperties("Bad Milk", -5, 10, "2025-05-01");
     log(badProduct1.toString());
 } catch (err) {
     log(`ERROR TEST 1: ${err.message}`);
 }
-
+    //Testing neg quantity
 try {
     const badProduct2 = new PerishableProductProperties("Bad Juice", 4.99, -3, "2025-05-01");
     log(badProduct2.toString());
 } catch (err) {
     log(`ERROR TEST 2: ${err.message}`);
 }
-
+    //Testing bad expiry
 try {
     const badProduct3 = new PerishableProductProperties("Bad Cheese", 7.49, 4, "");
     log(badProduct3.toString());
 } catch (err) {
-    log(`⚠️ ERROR TEST 3: ${err.message}`);
+    log(`ERROR TEST 3: ${err.message}`);
 }
 
 log ("Error Handling Tests Completed.");
