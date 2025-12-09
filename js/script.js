@@ -5,7 +5,7 @@ console.log("Lab 10 scripts have been loaded");
 const output = document.getElementById("output");
 const log = (msg) => (output.innerHTML += `<p>${msg}</p>`);
 
-log("<strong>Phase 1 Setup has been Completed:</strong> HTML, CSS, and JavaScript linked successfully");
+log("<strong>HTML, CSS, and JavaScript linked successfully");
 
 
 // Custom Error Classes
@@ -105,7 +105,7 @@ console.log("Perishable Products");
 console.log(perishable1.toString());
 console.log(perishable2.toString());
 
-log("<strong>Phase 2 Completed: Perishable Products</strong>");
+log("<strong>Perishable Products Completed</strong>");
 log(perishable1.toString());
 log(perishable2.toString());
 
