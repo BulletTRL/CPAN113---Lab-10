@@ -42,3 +42,13 @@ console.log(perishable2.toString());
 log("<strong>Phase 2 Completed: Perishable Products</strong>");
 log(perishable1.toString());
 log(perishable2.toString());
+
+
+// Custom Error Classes
+
+class ProductError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = "ProductError";
+    }
+}
