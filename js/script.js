@@ -7,6 +7,16 @@ const log = (msg) => (output.innerHTML += `<p>${msg}</p>`);
 
 log("<strong>Phase 1 Setup has been Completed:</strong> HTML, CSS, and JavaScript linked successfully");
 
+
+// Custom Error Classes
+
+class ProductError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = "ProductError";
+    }
+}
+
 // ProductProperties Class
 
 class ProductProperties {
@@ -66,13 +76,3 @@ console.log(perishable2.toString());
 log("<strong>Phase 2 Completed: Perishable Products</strong>");
 log(perishable1.toString());
 log(perishable2.toString());
-
-
-// Custom Error Classes
-
-class ProductError extends Error {
-    constructor(message) {
-        super(message);
-        this.name = "ProductError";
-    }
-}
