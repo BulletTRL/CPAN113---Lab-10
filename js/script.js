@@ -139,6 +139,20 @@ const perishable2 = new PerishableProductProperties(
     "2024-12-15"
 );
 
+const apple = new ProductProperties("Apple", 0.99, 50);
+const bread = new ProductProperties("Bread", 2.49, 30);
+const cereal = new ProductProperties("Cereal", 4.99, 12);
+
+// Create the store and add all products to this store
+const store = new StoreProperties();
+store.addProduct(perishable1);
+store.addProduct(perishable2);
+store.addProduct(apple);
+store.addProduct(bread);
+store.addProduct(cereal);
+
+log("<strong>Store setup completed with 5 products (2 perishable).</strong>");
+
 console.log("Perishable Products");
 console.log(perishable1.toString());
 console.log(perishable2.toString());
