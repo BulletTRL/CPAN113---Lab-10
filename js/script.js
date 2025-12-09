@@ -52,3 +52,12 @@ class ProductError extends Error {
         this.name = "ProductError";
     }
 }
+
+validate() {
+    if (this.price < 0) {
+        throw new ProductError("Price cannot be negative");
+    }
+    if (this.quantity < 0) {
+        throw new ProductError("Quantity cannot be negative");
+    }
+}
