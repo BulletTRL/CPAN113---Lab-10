@@ -27,3 +27,10 @@ const perishable1 = new PerishableProductProperties(
     20,
     "2025-01-10"
 );
+
+const perishable2 = new PerishableProductProperties(
+    "Yogurt",
+    1.99,
+    15,
+    "2024-12-15"
+);
