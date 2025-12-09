@@ -25,11 +25,21 @@ class ProductProperties {
 
 class PerishableProductProperties extends ProductProperties {
     constructor(name, price, quantity, expirationDate) {
-        super(name, price, quantity);  // call parent constructor
+        super(name, price, quantity);  
         this.expirationDate = expirationDate;
+
+        // ⭐ Phase 3 Validation Logic (Commit 11)
+        if (price < 0) {
+            throw new ProductError("PRICE CANNOT BE NEGATIVE");
+        }
+        if (quantity < 0) {
+            throw new ProductError("QUANTITY CANNOT BE NEGATIVE");
+        }
+        if (!expirationDate) {
+            throw new ProductError("EXPIRATION DATE IS REQUIRED");
+        }
     }
 
-    // Override parent method
     toString() {
         return `${super.toString()}, Expiration Date: ${this.expirationDate}`;
     }
@@ -64,14 +74,5 @@ class ProductError extends Error {
     constructor(message) {
         super(message);
         this.name = "ProductError";
-    }
-}
-
-validate() {
-    if (this.price < 0) {
-        throw new ProductError("Price cannot be negative");
-    }
-    if (this.quantity < 0) {
-        throw new ProductError("Quantity cannot be negative");
     }
 }
