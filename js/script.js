@@ -111,3 +111,6 @@ log(perishable2.toString());
 
 //Expiration Scan
 simulateExpirationScan([perishable1, perishable2]);
+
+//Error testing below
+log ("<strong>Beginning Error Tests...</strong>");
