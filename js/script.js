@@ -20,3 +20,10 @@ class PerishableProductProperties extends ProductProperties {
         return `${super.toString()}, Expiration Date: ${this.expirationDate}`;
     }
 }
+
+const perishable1 = new PerishableProductProperties(
+    "Milk",
+    3.50,
+    20,
+    "2025-01-10"
+);
