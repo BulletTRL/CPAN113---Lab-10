@@ -114,3 +114,10 @@ simulateExpirationScan([perishable1, perishable2]);
 
 //Error testing below
 log ("<strong>Beginning Error Tests...</strong>");
+
+try {
+    const badProduct1 = new PerishableProductProperties("Bad Milk", -5, 10, "2025-05-01");
+    log(badProduct1.toString());
+} catch (err) {
+    log(`⚠️ ERROR TEST 1: ${err.message}`);
+}
