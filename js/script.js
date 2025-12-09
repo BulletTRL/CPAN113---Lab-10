@@ -164,6 +164,16 @@ ProductProperties.applyDiscount(store.inventory, 0.15);
 const discountedInventoryValue = store.getInventoryValue();
 log(`<strong>Inventory value after 15% discount:</strong> $${discountedInventoryValue.toFixed(2)}`);
 
+// Find and display a specific product by name
+const searchedName = "Milk";
+const foundProduct = store.findProductByName(searchedName);
+
+if (foundProduct) {
+    log(`<strong>Found product (${searchedName}):</strong> ${foundProduct.toString()}`);
+} else {
+    log(`<strong>Product not found:</strong> ${searchedName}`);
+}
+
 console.log("Perishable Products");
 console.log(perishable1.toString());
 console.log(perishable2.toString());
