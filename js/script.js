@@ -128,3 +128,10 @@ try {
 } catch (err) {
     log(`ERROR TEST 2: ${err.message}`);
 }
+
+try {
+    const badProduct3 = new PerishableProductProperties("Bad Cheese", 7.49, 4, "");
+    log(badProduct3.toString());
+} catch (err) {
+    log(`⚠️ ERROR TEST 3: ${err.message}`);
+}
