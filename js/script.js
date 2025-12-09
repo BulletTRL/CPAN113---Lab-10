@@ -34,3 +34,7 @@ const perishable2 = new PerishableProductProperties(
     15,
     "2024-12-15"
 );
+
+console.log("Perishable Products");
+console.log(perishable1.toString());
+console.log(perishable2.toString());
