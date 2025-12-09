@@ -26,6 +26,11 @@ class ProductProperties {
         this.quantity = quantity;
     }
 
+    //Returns total value of this product in stock from the inventory
+    getTotalValue() {
+        return this.price * this.quantity;
+    }
+
     toString() {
         return `Name: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}`;
     }
