@@ -7,6 +7,20 @@ const log = (msg) => (output.innerHTML += `<p>${msg}</p>`);
 
 log("<strong>Phase 1 Setup has been Completed:</strong> HTML, CSS, and JavaScript linked successfully");
 
+// ProductProperties Class
+
+class ProductProperties {
+    constructor(name, price, quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    toString() {
+        return `Name: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}`;
+    }
+}
+
 // Subclass Inharitance
 
 class PerishableProductProperties extends ProductProperties {
